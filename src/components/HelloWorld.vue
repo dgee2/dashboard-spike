@@ -1,58 +1,77 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
+  <tiled-dashboard>
+    <dashboard-tile Title="Sales" xl3 lg4 sm6 xs12>
+      <line-chart
+        :data="{ '2017-05-01': 2, '2017-06-01': 5, '2017-07-01': 4 }"
+      ></line-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="CSM" xl3 lg4 sm6 xs12>
+      <pie-chart
+        :data="{
+          Blueberry: 44,
+          Strawberry: 23,
+        }"
+      ></pie-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="Marketing" xl3 lg4 sm6 xs12>
+      <column-chart
+        :data="{
+          Sun: 32,
+          Mon: 46,
+          Tue: 28,
+        }"
+      ></column-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="Compliance" xl3 lg4 sm6 xs12>
+      <bar-chart
+        :data="{
+          'X-Small': 5,
+          Small: 27,
+        }"
+      ></bar-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="Sales" xl3 lg4 sm6 xs12>
+      <line-chart
+        :data="{ '2017-05-01': 2, '2017-06-01': 5, '2017-07-01': 4 }"
+      ></line-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="CSM" xl3 lg4 sm6 xs12>
+      <pie-chart
+        :data="{
+          Blueberry: 44,
+          Strawberry: 23,
+        }"
+      ></pie-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="Marketing" xl3 lg4 sm6 xs12>
+      <column-chart
+        :data="{
+          Sun: 32,
+          Mon: 46,
+          Tue: 28,
+        }"
+      ></column-chart>
+    </dashboard-tile>
+    <dashboard-tile Title="Compliance" xl3 lg4 sm6 xs12>
+      <bar-chart
+        :data="{
+          'X-Small': 5,
+          Small: 27,
+        }"
+      ></bar-chart>
+    </dashboard-tile>
+  </tiled-dashboard>
 </template>
 
 <script>
+import DashboardTile from "./DashboardTile.vue";
+import TiledDashboard from "./TiledDashboard.vue";
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+  components: { DashboardTile, TiledDashboard },
+  name: "HelloWorld",
+
+  data: () => ({}),
+};
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+<style></style>

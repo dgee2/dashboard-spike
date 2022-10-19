@@ -1,8 +1,8 @@
 <template>
   <v-flex d-flex v-bind="$attrs">
-    <v-card width="100%" outlined elevation="3">
+    <v-card class="card" outlined elevation="3">
       <v-card-title>{{Title}}</v-card-title>
-      <v-card-text>
+      <v-card-text class="card-body">
         <slot></slot>
       </v-card-text>
     </v-card>
@@ -17,4 +17,13 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+  .card-body{
+    height: 100%;
+    padding-bottom: 40px;
+  }
+  .card{
+    height: 400px;
+    width: 100%;
+  }
+</style>

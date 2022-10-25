@@ -1,6 +1,6 @@
 <template>
   <tiled-dashboard>
-    <dashboard-tile Title="Chart.js Line Graph" xl3 lg4 sm6 xs12>
+    <!-- <dashboard-tile Title="Chart.js Line Graph" xl3 lg4 sm6 xs12>
       <line-chart
         :data="{ '2017-05-01': 2, '2017-06-01': 5, '2017-07-01': 4 }"
       ></line-chart>
@@ -35,31 +35,31 @@
     </dashboard-tile>
     <dashboard-tile Title="ECharts Pie" xl3 lg4 sm6 xs12>
       <e-charts-pie />
-    </dashboard-tile>
-    <dashboard-tile Title="ECharts Vertical Bar Chart" xl3 lg4 sm6 xs12>
+    </dashboard-tile> -->
+    <dashboard-tile Title="Retention" xl3 lg4 sm6 xs12>
       <e-charts-bar />
     </dashboard-tile>
-    <dashboard-tile Title="ECharts Horizontal Bar Chart" xl3 lg4 sm6 xs12>
+    <!-- <dashboard-tile Title="ECharts Horizontal Bar Chart" xl3 lg4 sm6 xs12>
       <e-charts-horizontal-bar />
-    </dashboard-tile>
+    </dashboard-tile> -->
   </tiled-dashboard>
 </template>
 
 <script>
 import DashboardTile from "./DashboardTile.vue";
 import EChartsBar from "./EChartsBar.vue";
-import EChartsHorizontalBar from "./EChartsHorizontalBar.vue";
-import EChartsLine from "./EChartsLine.vue";
-import EChartsPie from "./EChartsPie.vue";
+// import EChartsHorizontalBar from "./EChartsHorizontalBar.vue";
+// import EChartsLine from "./EChartsLine.vue";
+// import EChartsPie from "./EChartsPie.vue";
 import TiledDashboard from "./TiledDashboard.vue";
 export default {
   components: {
     DashboardTile,
     TiledDashboard,
-    EChartsPie,
-    EChartsLine,
+    //EChartsPie,
+    //EChartsLine,
     EChartsBar,
-    EChartsHorizontalBar,
+    //EChartsHorizontalBar,
   },
   name: "HelloWorld",
 
